@@ -1,0 +1,244 @@
+\begin{thebibliography}{13}
+% BibTex style file: bmc-mathphys.bst (version 1.01), 2012-01-06
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\textsf{#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem{braverman1995hitchhiking}
+\begin{barticle}
+\bauthor{\bsnm{Braverman}, \binits{J.M.}},
+\bauthor{\bsnm{Hudson}, \binits{R.R.}},
+\bauthor{\bsnm{Kaplan}, \binits{N.L.}},
+\bauthor{\bsnm{Langley}, \binits{C.H.}},
+\bauthor{\bsnm{Stephan}, \binits{W.}}:
+\batitle{The hitchhiking effect on the site frequency spectrum of dna
+  polymorphisms.}
+\bjtitle{Genetics}
+\bvolume{140}(\bissue{2}),
+\bfpage{783}--\blpage{796}
+(\byear{1995})
+\end{barticle}
+\endbibitem
+
+%%% 2
+\bibitem{wright1949genetical}
+\begin{barticle}
+\bauthor{\bsnm{Wright}, \binits{S.}}:
+\batitle{The genetical structure of populations}.
+\bjtitle{Annals of eugenics}
+\bvolume{15}(\bissue{1}),
+\bfpage{323}--\blpage{354}
+(\byear{1949})
+\end{barticle}
+\endbibitem
+
+%%% 3
+\bibitem{nei1973analysis}
+\begin{barticle}
+\bauthor{\bsnm{Nei}, \binits{M.}}:
+\batitle{Analysis of gene diversity in subdivided populations}.
+\bjtitle{Proceedings of the National Academy of Sciences}
+\bvolume{70}(\bissue{12}),
+\bfpage{3321}--\blpage{3323}
+(\byear{1973})
+\end{barticle}
+\endbibitem
+
+%%% 4
+\bibitem{akey2002interrogating}
+\begin{barticle}
+\bauthor{\bsnm{Akey}, \binits{J.M.}},
+\bauthor{\bsnm{Zhang}, \binits{G.}},
+\bauthor{\bsnm{Zhang}, \binits{K.}},
+\bauthor{\bsnm{Jin}, \binits{L.}},
+\bauthor{\bsnm{Shriver}, \binits{M.D.}}:
+\batitle{Interrogating a high-density snp map for signatures of natural
+  selection}.
+\bjtitle{Genome research}
+\bvolume{12}(\bissue{12}),
+\bfpage{1805}--\blpage{1814}
+(\byear{2002})
+\end{barticle}
+\endbibitem
+
+%%% 5
+\bibitem{zhao2010genomic}
+\begin{barticle}
+\bauthor{\bsnm{Zhao}, \binits{K.}},
+\bauthor{\bsnm{Wright}, \binits{M.}},
+\bauthor{\bsnm{Kimball}, \binits{J.}},
+\bauthor{\bsnm{Eizenga}, \binits{G.}},
+\bauthor{\bsnm{McClung}, \binits{A.}},
+\bauthor{\bsnm{Kovach}, \binits{M.}},
+\bauthor{\bsnm{Tyagi}, \binits{W.}},
+\bauthor{\bsnm{Ali}, \binits{M.L.}},
+\bauthor{\bsnm{Tung}, \binits{C.-W.}},
+\bauthor{\bsnm{Reynolds}, \binits{A.}}, \betal:
+\batitle{Genomic diversity and introgression in o. sativa reveal the impact of
+  domestication and breeding on the rice genome}.
+\bjtitle{PLoS One}
+\bvolume{5}(\bissue{5}),
+\bfpage{10780}
+(\byear{2010})
+\end{barticle}
+\endbibitem
+
+%%% 6
+\bibitem{kijas2012genome}
+\begin{barticle}
+\bauthor{\bsnm{Kijas}, \binits{J.W.}},
+\bauthor{\bsnm{Lenstra}, \binits{J.A.}},
+\bauthor{\bsnm{Hayes}, \binits{B.}},
+\bauthor{\bsnm{Boitard}, \binits{S.}},
+\bauthor{\bsnm{Neto}, \binits{L.R.P.}},
+\bauthor{\bsnm{San~Cristobal}, \binits{M.}},
+\bauthor{\bsnm{Servin}, \binits{B.}},
+\bauthor{\bsnm{McCulloch}, \binits{R.}},
+\bauthor{\bsnm{Whan}, \binits{V.}},
+\bauthor{\bsnm{Gietzen}, \binits{K.}}, \betal:
+\batitle{Genome-wide analysis of the world's sheep breeds reveals high levels
+  of historic mixture and strong recent selection}.
+\bjtitle{PLoS biology}
+\bvolume{10}(\bissue{2}),
+\bfpage{1001258}
+(\byear{2012})
+\end{barticle}
+\endbibitem
+
+%%% 7
+\bibitem{nielsen2005genomic}
+\begin{barticle}
+\bauthor{\bsnm{Nielsen}, \binits{R.}},
+\bauthor{\bsnm{Williamson}, \binits{S.}},
+\bauthor{\bsnm{Kim}, \binits{Y.}},
+\bauthor{\bsnm{Hubisz}, \binits{M.J.}},
+\bauthor{\bsnm{Clark}, \binits{A.G.}},
+\bauthor{\bsnm{Bustamante}, \binits{C.}}:
+\batitle{Genomic scans for selective sweeps using snp data}.
+\bjtitle{Genome research}
+\bvolume{15}(\bissue{11}),
+\bfpage{1566}--\blpage{1575}
+(\byear{2005})
+\end{barticle}
+\endbibitem
+
+%%% 8
+\bibitem{stella2010identification}
+\begin{barticle}
+\bauthor{\bsnm{Stella}, \binits{A.}},
+\bauthor{\bsnm{Ajmone-Marsan}, \binits{P.}},
+\bauthor{\bsnm{Lazzari}, \binits{B.}},
+\bauthor{\bsnm{Boettcher}, \binits{P.}}:
+\batitle{Identification of selection signatures in cattle breeds selected for
+  dairy production}.
+\bjtitle{Genetics}
+\bvolume{185}(\bissue{4}),
+\bfpage{1451}--\blpage{1461}
+(\byear{2010})
+\end{barticle}
+\endbibitem
+
+%%% 9
+\bibitem{koon}
+\begin{barticle}
+\bauthor{\bsnm{Koonin}, \binits{E.V.}},
+\bauthor{\bsnm{Altschul}, \binits{S.F.}},
+\bauthor{\bsnm{Bork}, \binits{P.}}:
+\batitle{Brca1 protein products: functional motifs}.
+\bjtitle{Nat Genet}
+\bvolume{13},
+\bfpage{266}--\blpage{267}
+(\byear{1996})
+\end{barticle}
+\endbibitem
+
+%%% 10
+\bibitem{khar}
+\begin{botherref}
+\oauthor{\bsnm{Kharitonov}, \binits{S.A.}},
+\oauthor{\bsnm{Barnes}, \binits{P.J.}}:
+Clinical Aspects of Exhaled Nitric Oxide.
+in press
+\end{botherref}
+\endbibitem
+
+%%% 11
+\bibitem{zvai}
+\begin{barticle}
+\bauthor{\bsnm{Zvaifler}, \binits{N.J.}},
+\bauthor{\bsnm{Burger}, \binits{J.A.}},
+\bauthor{\bsnm{Marinova-Mutafchieva}, \binits{L.}},
+\bauthor{\bsnm{Taylor}, \binits{P.}},
+\bauthor{\bsnm{Maini}, \binits{R.N.}}:
+\batitle{Mesenchymal cells, stromal derived factor-1 and rheumatoid arthritis
+  [abstract]}.
+\bjtitle{Arthritis Rheum}
+\bvolume{42},
+\bfpage{250}
+(\byear{1999})
+\end{barticle}
+\endbibitem
+
+%%% 12
+\bibitem{xjon}
+\begin{bchapter}
+\bauthor{\bsnm{Jones}, \binits{X.}}:
+\bctitle{Zeolites and synthetic mechanisms}.
+In: \beditor{\bsnm{Smith}, \binits{Y.}} (ed.)
+\bbtitle{Proceedings of the First National Conference on Porous Sieves: 27-30
+  June 1996; Baltimore},
+pp. \bfpage{16}--\blpage{27}
+(\byear{1996}).
+\bcomment{Stoneham: Butterworth-Heinemann}
+\end{bchapter}
+\endbibitem
+
+%%% 13
+\bibitem{marg}
+\begin{bbook}
+\bauthor{\bsnm{Margulis}, \binits{L.}}:
+\bbtitle{Origin of Eukaryotic Cells}.
+\bpublisher{Yale University Press},
+\blocation{New Haven}
+(\byear{1970})
+\end{bbook}
+\endbibitem
+
+\end{thebibliography}
