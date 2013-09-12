@@ -70,18 +70,6 @@
 \endbibitem
 
 %%% 3
-\bibitem{nei1973analysis}
-\begin{barticle}
-\bauthor{\bsnm{Nei}, \binits{M.}}:
-\batitle{Analysis of gene diversity in subdivided populations}.
-\bjtitle{Proceedings of the National Academy of Sciences}
-\bvolume{70}(\bissue{12}),
-\bfpage{3321}--\blpage{3323}
-(\byear{1973})
-\end{barticle}
-\endbibitem
-
-%%% 4
 \bibitem{akey2002interrogating}
 \begin{barticle}
 \bauthor{\bsnm{Akey}, \binits{J.M.}},
@@ -98,7 +86,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 5
+%%% 4
 \bibitem{zhao2010genomic}
 \begin{barticle}
 \bauthor{\bsnm{Zhao}, \binits{K.}},
@@ -120,7 +108,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 6
+%%% 5
 \bibitem{kijas2012genome}
 \begin{barticle}
 \bauthor{\bsnm{Kijas}, \binits{J.W.}},
@@ -142,7 +130,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 7
+%%% 6
 \bibitem{nielsen2005genomic}
 \begin{barticle}
 \bauthor{\bsnm{Nielsen}, \binits{R.}},
@@ -159,7 +147,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 8
+%%% 7
 \bibitem{stella2010identification}
 \begin{barticle}
 \bauthor{\bsnm{Stella}, \binits{A.}},
@@ -172,6 +160,19 @@
 \bvolume{185}(\bissue{4}),
 \bfpage{1451}--\blpage{1461}
 (\byear{2010})
+\end{barticle}
+\endbibitem
+
+%%% 8
+\bibitem{nei1977f}
+\begin{barticle}
+\bauthor{\bsnm{Nei}, \binits{M.}}:
+\batitle{F-statistics and analysis of gene diversity in subdivided
+  populations}.
+\bjtitle{Annals of human genetics}
+\bvolume{41}(\bissue{2}),
+\bfpage{225}--\blpage{233}
+(\byear{1977})
 \end{barticle}
 \endbibitem
 

@@ -3,27 +3,28 @@ The top-level auxiliary file: CLLMethodsArticle_1.aux
 The style file: bmc-mathphys.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 472446405560.
 Database file #1: cll-biblio.bib
+Warning--I didn't find a database entry for "nei1973f"
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 You've used 9 entries,
             6330 wiz_defined-function locations,
-            1077 strings with 10674 characters,
-and the built_in function-call counts, 47383 in all, are:
-= -- 5561
-> -- 451
-< -- 192
+            1077 strings with 10645 characters,
+and the built_in function-call counts, 47295 in all, are:
+= -- 5560
+> -- 447
+< -- 188
 + -- 921
 - -- 110
-* -- 3528
-:= -- 9424
+* -- 3524
+:= -- 9412
 add.period$ -- 9
 call.type$ -- 9
 change.case$ -- 45
-chr.to.int$ -- 552
+chr.to.int$ -- 540
 cite$ -- 9
-duplicate$ -- 566
-empty$ -- 3243
+duplicate$ -- 562
+empty$ -- 3239
 format.name$ -- 351
-if$ -- 10712
+if$ -- 10686
 int.to.chr$ -- 1
 int.to.str$ -- 10
 missing$ -- 0
@@ -33,10 +34,10 @@ pop$ -- 241
 preamble$ -- 1
 purify$ -- 36
 quote$ -- 0
-skip$ -- 3011
+skip$ -- 3006
 stack$ -- 0
-substring$ -- 6739
-swap$ -- 357
+substring$ -- 6731
+swap$ -- 353
 text.length$ -- 106
 text.prefix$ -- 0
 top$ -- 0
@@ -45,3 +46,4 @@ warning$ -- 0
 while$ -- 350
 width$ -- 0
 write$ -- 213
+(There was 1 warning)
