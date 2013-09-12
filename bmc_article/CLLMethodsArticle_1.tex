@@ -242,7 +242,7 @@ Text for this section.
 
 %%%%%%%%%%%%%%%%
 %% Background %%
-%%
+%%%%%%%%%%%%%%%%
 \section*{Background}
 Selection, both natural and artificial, is one of the major forces that
 can shape the genome of living organisms and change allele frequencies.
@@ -290,16 +290,32 @@ The results of the study are hereby presented and discussed.
 \subsection*{Numerical illustration}
 Text for this sub-heading \ldots
 \subsection*{Working example}
+
+Data from a population of xxx Holstein-Frisian (zzz males and xxx
+females) and yyy Piedmontese (males and females?)
+cattle were available. The first breed has been long selected for dairy
+production, the latter for meat production. All animals were genotyped
+with the Bovine 54k SNP-chip. Genotypes were edited for individual and
+marker call-rate ($>95\%$ ?) and for MAF ($>0.05$ ?). Remaining missing
+genotypes were imputed using (check this!). Xxx SNPs were eventually
+available for analysis. We selected the zzz SNPs on chromosome 3 (BTA-3) as
+working example to test the different estimators of the CLL of the
+allele frequency difference between populations and the reference
+methods ($F_{ST}$ and Euclidean distances) for the detection of
+signatures of selection.
+BTA-3 is known to host, within the gene \emph{SLC35A3} (position:
+43400328-43445390 bps, approximately halfay along the chromosome), the point mutation responsible for CVM (Complex
+Vertebral Malformation) in Holstein-Frisian cattle (\cite{thomsen2006missense}).  
+CVM is a recessive inherited disorder that frequently causes abortion or perinatal
+death in Holstein-Frisian calves. Other cattle breeds -including Piedmontese- are not affected by
+the condition. A strong signal is therefore expected to be found at this
+site, making this an ideally suited comparison to test different methods
+for the detection of signatures of selection.
+
+
 \subsubsection*{Working example}
 Text for this sub-sub-heading \ldots
 \paragraph*{Sub-sub-sub heading for section}
-Text for this sub-sub-sub-heading \ldots
-In this section we examine the growth rate of the mean of $Z_0$, $Z_1$ and $Z_2$. In
-addition, we examine a common modeling assumption and note the
-importance of considering the tails of the extinction time $T_x$ in
-studies of escape dynamics.
-We will first consider the expected resistant population at $vT_x$ for
-some $v>0$, (and temporarily assume $\alpha=0$)
 %
 \[
  E \bigl[Z_1(vT_x) \bigr]= E
@@ -307,11 +323,6 @@ some $v>0$, (and temporarily assume $\alpha=0$)
 1}Z_0(uT_x)
 \exp \bigl(\lambda_1T_x(v-u) \bigr)\,du \biggr].
 \]
-%
-If we assume that sensitive cells follow a deterministic decay
-$Z_0(t)=xe^{\lambda_0 t}$ and approximate their extinction time as
-$T_x\approx-\frac{1}{\lambda_0}\log x$, then we can heuristically
-estimate the expected value as
 %
 \begin{eqnarray}\label{eqexpmuts}
 E\bigl[Z_1(vT_x)\bigr] &=& \frac{\mu}{r}\log x
@@ -323,8 +334,6 @@ E\bigl[Z_1(vT_x)\bigr] &=& \frac{\mu}{r}\log x
 &=& \frac{\mu}{\lambda_1-\lambda_0}x^{1+{\lambda_1}/{r}v} \biggl(1-\exp \biggl[-(v\wedge1) \biggl(1+
 \frac{\lambda_1}{r}\biggr)\log x \biggr] \biggr).
 \end{eqnarray}
-%
-Thus we observe that this expected value is finite for all $v>0$ (also see \cite{koon,khar,zvai,xjon,marg}).
 
 \section*{Results and discussion}
 Text \ldots

@@ -3,48 +3,45 @@ The top-level auxiliary file: CLLMethodsArticle_1.aux
 The style file: bmc-mathphys.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 472446405560.
 Database file #1: cll-biblio.bib
-Warning--entry type for "khar" isn't style-file defined
---line 259 of file cll-biblio.bib
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-You've used 13 entries,
+You've used 9 entries,
             6330 wiz_defined-function locations,
-            1103 strings with 10957 characters,
-and the built_in function-call counts, 186580 in all, are:
-= -- 33451
-> -- 519
-< -- 225
-+ -- 19745
-- -- 143
-* -- 5277
-:= -- 32786
-add.period$ -- 14
-call.type$ -- 13
-change.case$ -- 96
-chr.to.int$ -- 625
-cite$ -- 13
-duplicate$ -- 664
-empty$ -- 3489
-format.name$ -- 387
-if$ -- 47671
+            1077 strings with 10674 characters,
+and the built_in function-call counts, 47383 in all, are:
+= -- 5561
+> -- 451
+< -- 192
++ -- 921
+- -- 110
+* -- 3528
+:= -- 9424
+add.period$ -- 9
+call.type$ -- 9
+change.case$ -- 45
+chr.to.int$ -- 552
+cite$ -- 9
+duplicate$ -- 566
+empty$ -- 3243
+format.name$ -- 351
+if$ -- 10712
 int.to.chr$ -- 1
-int.to.str$ -- 17
+int.to.str$ -- 10
 missing$ -- 0
-newline$ -- 237
-num.names$ -- 55
-pop$ -- 289
+newline$ -- 194
+num.names$ -- 36
+pop$ -- 241
 preamble$ -- 1
-purify$ -- 55
+purify$ -- 36
 quote$ -- 0
-skip$ -- 20475
+skip$ -- 3011
 stack$ -- 0
-substring$ -- 18464
-swap$ -- 403
-text.length$ -- 177
+substring$ -- 6739
+swap$ -- 357
+text.length$ -- 106
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 566
+type$ -- 405
 warning$ -- 0
-while$ -- 455
+while$ -- 350
 width$ -- 0
-write$ -- 267
-(There was 1 warning)
+write$ -- 213
