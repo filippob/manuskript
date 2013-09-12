@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.10)  12 SEP 2013 11:41
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.10)  12 SEP 2013 17:43
 entering extended mode
  %&-line parsing enabled.
 **\input CLLMethodsArticle_1.tex
@@ -346,7 +346,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 170.
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 288.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 291.
 
 
 
@@ -356,8 +356,8 @@ Overfull \hbox (1.0pt too wide) has occurred while \output is active
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-]
-(./CLLMethodsArticle_1.bbl [2]
+] [2]
+(./CLLMethodsArticle_1.bbl
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <7> not available
 (Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 113.
@@ -365,9 +365,9 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <7> not available
 
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 399.
+(Font)              <8> on input line 406.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 399.
+(Font)              <6> on input line 406.
  AED: lastpage setting LastPage [3] (./CLLMethodsArticle_1.aux)
 
 LaTeX Font Warning: Size substitutions with differences
@@ -377,7 +377,7 @@ LaTeX Font Warning: Size substitutions with differences
 Here is how much of TeX's memory you used:
  2060 strings out of 495061
  24624 string characters out of 1182621
- 81657 words of memory out of 3000000
+ 82657 words of memory out of 3000000
  5263 multiletter control sequences out of 15000+50000
  10726 words of font info for 37 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
@@ -395,7 +395,7 @@ pe1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-texlive/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
 /cmsy7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb>
 
-Output written on CLLMethodsArticle_1.pdf (3 pages, 172636 bytes).
+Output written on CLLMethodsArticle_1.pdf (3 pages, 172797 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
