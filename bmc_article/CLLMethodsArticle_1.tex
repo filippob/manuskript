@@ -145,13 +145,13 @@
   \city{Lodi},                              % city
   \cny{Italy}                                    % country
 }
-\address[id=aff2]{%
-  \orgname{Marine Ecology Department, Institute of Marine Sciences Kiel},
-  \street{D\"{u}sternbrooker Weg 20},
-  \postcode{24105}
-  \city{Kiel},
-  \cny{Germany}
-}
+%\address[id=aff2]{%
+%  \orgname{Marine Ecology Department, Institute of Marine Sciences Kiel},
+%  \street{D\"{u}sternbrooker Weg 20},
+%  \postcode{24105}
+%  \city{Kiel},
+%  \cny{Germany}
+%}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
@@ -374,7 +374,7 @@ Three cases: A vs B, B vs A and A vs A+B
 \subsubsection*{Distribution of the differences (DIFF)}
 Two cases: parametrical test, resampling method
 
-\subsection*{Working example}
+\subsection*{``Ballons d'essai''}
 
 Data from a population of xxx Holstein-Frisian (zzz males and xxx
 females) and yyy Piedmontese (males and females?)
@@ -420,6 +420,22 @@ E\bigl[Z_1(vT_x)\bigr] &=& \frac{\mu}{r}\log x
 \frac{\lambda_1}{r}\biggr)\log x \biggr] \biggr).
 \end{eqnarray}
 
+\subsection*{Testing significance}
+
+When analysing tens or hundreds of thousands of markers the problem of
+multiple comparisons is incurred; this is true in general
+(\cite{berry2007difficult}), and specifically for genetic studies (\cite{lander1994genetic,risch1996future}). 
+
+
+\begin{itemize}
+\item Bonferroni correction: very strict; implicit prior assumption that the
+probability that \emph{all} tests are null ($H_0$ is true) is not small. If we believe
+that all tests could be null, then aiming to make the number of false
+positives zero is justifiable (\cite{wakefield2008reporting})
+\item FDR
+\item Permutation test
+\end{itemize}
+
 \section*{Results and discussion}
 Text \ldots
 
@@ -438,7 +454,7 @@ Text \ldots
     Text for this section \ldots
 
 \section*{Acknowledgements}
-  Text for this section \ldots
+  Data (Marras ...)? \ldots
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                  The Bibliography                       %%
 %%                                                         %%
