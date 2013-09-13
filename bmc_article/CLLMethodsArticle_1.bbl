@@ -1,4 +1,4 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{13}
 % BibTex style file: bmc-mathphys.bst (version 1.01), 2012-01-06
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -70,6 +70,19 @@
 \endbibitem
 
 %%% 3
+\bibitem{nei1977f}
+\begin{barticle}
+\bauthor{\bsnm{Nei}, \binits{M.}}:
+\batitle{F-statistics and analysis of gene diversity in subdivided
+  populations}.
+\bjtitle{Annals of human genetics}
+\bvolume{41}(\bissue{2}),
+\bfpage{225}--\blpage{233}
+(\byear{1977})
+\end{barticle}
+\endbibitem
+
+%%% 4
 \bibitem{akey2002interrogating}
 \begin{barticle}
 \bauthor{\bsnm{Akey}, \binits{J.M.}},
@@ -86,7 +99,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 4
+%%% 5
 \bibitem{zhao2010genomic}
 \begin{barticle}
 \bauthor{\bsnm{Zhao}, \binits{K.}},
@@ -108,7 +121,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 5
+%%% 6
 \bibitem{kijas2012genome}
 \begin{barticle}
 \bauthor{\bsnm{Kijas}, \binits{J.W.}},
@@ -130,7 +143,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 6
+%%% 7
 \bibitem{nielsen2005genomic}
 \begin{barticle}
 \bauthor{\bsnm{Nielsen}, \binits{R.}},
@@ -147,7 +160,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 7
+%%% 8
 \bibitem{stella2010identification}
 \begin{barticle}
 \bauthor{\bsnm{Stella}, \binits{A.}},
@@ -160,19 +173,6 @@
 \bvolume{185}(\bissue{4}),
 \bfpage{1451}--\blpage{1461}
 (\byear{2010})
-\end{barticle}
-\endbibitem
-
-%%% 8
-\bibitem{nei1977f}
-\begin{barticle}
-\bauthor{\bsnm{Nei}, \binits{M.}}:
-\batitle{F-statistics and analysis of gene diversity in subdivided
-  populations}.
-\bjtitle{Annals of human genetics}
-\bvolume{41}(\bissue{2}),
-\bfpage{225}--\blpage{233}
-(\byear{1977})
 \end{barticle}
 \endbibitem
 
@@ -195,6 +195,55 @@
 \bvolume{16}(\bissue{1}),
 \bfpage{97}--\blpage{105}
 (\byear{2006})
+\end{barticle}
+\endbibitem
+
+%%% 10
+\bibitem{berry2007difficult}
+\begin{barticle}
+\bauthor{\bsnm{Berry}, \binits{D.A.}}:
+\batitle{The difficult and ubiquitous problems of multiplicities}.
+\bjtitle{Pharmaceutical Statistics}
+\bvolume{6}(\bissue{3}),
+\bfpage{155}--\blpage{160}
+(\byear{2007})
+\end{barticle}
+\endbibitem
+
+%%% 11
+\bibitem{lander1994genetic}
+\begin{botherref}
+\oauthor{\bsnm{Lander}, \binits{E.S.}},
+\oauthor{\bsnm{Schork}, \binits{N.J.}}, et al.:
+Genetic dissection of complex traits.
+SCIENCE-NEW YORK THEN WASHINGTON-,
+2037--2037
+(1994)
+\end{botherref}
+\endbibitem
+
+%%% 12
+\bibitem{risch1996future}
+\begin{barticle}
+\bauthor{\bsnm{Risch}, \binits{N.}},
+\bauthor{\bsnm{Merikangas}, \binits{K.}}, \betal:
+\batitle{The future of genetic studies of complex human diseases}.
+\bjtitle{Science-AAAS-Weekly Paper Edition}
+\bvolume{273}(\bissue{5281}),
+\bfpage{1516}--\blpage{1517}
+(\byear{1996})
+\end{barticle}
+\endbibitem
+
+%%% 13
+\bibitem{wakefield2008reporting}
+\begin{barticle}
+\bauthor{\bsnm{Wakefield}, \binits{J.}}:
+\batitle{Reporting and interpretation in genome-wide association studies}.
+\bjtitle{International journal of epidemiology}
+\bvolume{37}(\bissue{3}),
+\bfpage{641}--\blpage{653}
+(\byear{2008})
 \end{barticle}
 \endbibitem
 

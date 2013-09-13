@@ -303,24 +303,26 @@ examples with real data on which the different estimators were tested.
 
 \subsection*{Numerical illustration}
 \subsubsection*{$F_{ST}$}
-The \emph{fixation index} ($F_{ST}$, \emph{Subpopulation} vs
-\emph{Total}) is a measure of population
-differentiation due to genetic structure.
-Generally speaking, genetic diversity is distributed within and
-among populations. In such a scenario,
-the total genetic diversity would be given by the sum of the
-interpopulation diversity ($D_{st}$) and the intrapopulation diversity
-(average of the expected heterozygosity -$H_S$- in the subpopulations):
+The $F_{ST}$ (Wright's \emph{F} statistics for \emph{Subpopulation} vs
+\emph{Total}), a.k.a. \emph{fixation index}, is a measure of the genetic
+substructure in a joint population (or of the genetic
+differentiation between (sub)populations). $F_{ST}$ was calculated as
+described by Nei (\cite{nei1977f}); partitioning the total
+expected heterozygosity ($H_T$, or gene diversity) into the
+\emph{interpopulation} diversity ($D_{ST}$) and the
+\emph{intrapopulation} diversity ($\overline{H}_S$, average of the
+expected heterozygosity -$H_S$- in the subpopulations weighted by their size),
+the $F_{ST}$ is defined as the proportion of gene diversity due to
+differentiation among subpopulations:
+
+\begin{equation} \label{eq:fstnei}
+F_{st}=\frac{D_{st}}{H_T}=\frac{H_T-\overline{H}_S}{H_T}=1-\frac{\overline{H}_S}{H_T}  
+\end{equation}
+
 
 \begin{equation}
 H_T=D_{st}+\overline{H}_S
 \end{equation} 
-
-\begin{figure}
-\centering
-\includegraphics{Fst.png}
-\caption{Population structure \label{fig:fst} }
-\end{figure}
 
 $\overline{H}_S$ is the average expected heterozygosity within
 subpopulations. Let $H_S$ be the expected heterozygosity within a single
@@ -350,14 +352,8 @@ expected heterozygosity in the total population is then:
 H_T=1-\frac{1}{L}\sum_{l=1}^L \sum_{i=1}^m \overline{p}_{il}^2  
 \end{equation}
 
-The $F_{st}$ is the proportion of genetic diversity due to
-differentiation among subpopulations ( \cite{nei1977f}:
 
-\begin{equation} \label{eq:fstnei}
-F_{st}=\frac{D_{st}}{H_T}=\frac{H_T-\overline{H}_S}{H_T}=1-\frac{\overline{H}_S}{H_T}  
-\end{equation}
-
-$F_{st}$ measures the deviation of heterozygosity from Hardy-Weinber
+$F_{st}$ measures the deviation of heterozygosity from Hardy-Weinberg
 equilibrium in the total population which is due to the differentiation
 among subpopulations.
 The comparison between the heterozygosity expected under Hardy-Weinberg
@@ -397,34 +393,27 @@ the condition. A strong signal is therefore expected to be found at this
 site, making this an ideally suited comparison to test different methods
 for the detection of signatures of selection.
 
+?` Also DGAT1, Myostatin, Caseins ?
 
 \subsubsection*{Working example}
 Text for this sub-sub-heading \ldots
 \paragraph*{Sub-sub-sub heading for section}
-%
-\[
- E \bigl[Z_1(vT_x) \bigr]= E
-\biggl[\mu T_x\int_0^{v\wedge
-1}Z_0(uT_x)
-\exp \bigl(\lambda_1T_x(v-u) \bigr)\,du \biggr].
-\]
-%
-\begin{eqnarray}\label{eqexpmuts}
-E\bigl[Z_1(vT_x)\bigr] &=& \frac{\mu}{r}\log x
-\int_0^{v\wedge1}x^{1-u}x^{({\lambda_1}/{r})(v-u)}\,du
-\nonumber\\
-&=& \frac{\mu}{r}x^{1-{\lambda_1}/{\lambda_0}v}\log x\int_0^{v\wedge
-1}x^{-u(1+{\lambda_1}/{r})}\,du
-\nonumber\\
-&=& \frac{\mu}{\lambda_1-\lambda_0}x^{1+{\lambda_1}/{r}v} \biggl(1-\exp \biggl[-(v\wedge1) \biggl(1+
-\frac{\lambda_1}{r}\biggr)\log x \biggr] \biggr).
-\end{eqnarray}
+sasad
 
 \subsection*{Testing significance}
 
 When analysing tens or hundreds of thousands of markers the problem of
-multiple comparisons is incurred; this is true in general
-(\cite{berry2007difficult}), and specifically for genetic studies (\cite{lander1994genetic,risch1996future}). 
+multiple comparisons is incurred. This is a known statistical problem in general
+(\cite{berry2007difficult}), and specifically in the field of genetic
+studies (\cite{lander1994genetic,risch1996future}). As the number of
+independent tests increases, the probability of obtaining at least one
+false positive, under $H_0$, approaches one. This probability is a
+function of the number of tests \emph{n} and of the chosen significance
+threshold \emph{\(\alpha\)}: \(P(false\_positive)=1-(1-\alpha)^n\). When, for instance,
+50000 SNP markers are tested along the genome in search of signatures of
+selection, for $\alpha=0.01$, 500 false positive associations are expected on averege, just
+by mere chance. 
+
 
 
 \begin{itemize}
