@@ -277,24 +277,26 @@ for the likelihood of the difference between allele frequency, and
 assess how well they are capable of detected actual signals of
 selection.
 
-In this study we evaluated 6 different ways to estimate the likelihood
+In this study we evaluated 4 different ways to estimate the likelihood
 of the difference in allele frequency between populations. The logarithm
 of the likelihoods thus calculated were then computed and combined across sliding windows
 along the genome (CLL, composite log-likelihood) in order to detect
 signatures of selection. The proposed CLL approaches were compared among
-them and with approaches based on $F_{ST}$ and on simple squared (Euclidean?)
+them and with approaches based on $F_{ST}$ and on simple squared
 distances between genotypes. All methods were first analysed numerically
 along the entire dimensional space (frequencies in analysed populations
 ranging from 0 to 1) and then tested with real data where strong signals
-of selection are known to be present.
-The results of the study are hereby presented and discussed.  
+of selection are known to be present. The methods hereby presented have
+been developed having in mind biallelic genetic markers (namely SNPs),
+but can in principle be adapted to any kind of markers (discuss this in
+``Results and discussion''?).
 
 \section*{Methods}
 
 Let's assume we have a test population \emph{T} (the population on which we want to detect
 signatures of selection) and a null or reference population \emph{N} (the
 contrasting population(s)). On these populations $F_{ST}$, the squared
-difference of the allelic frequencies, and six different likelihood
+difference of the allelic frequencies, and four different likelihood
 measures of allele frequency differences have been computed and
 evaluated in terms of their ability to detect signatures of selection. 
 First, we present numerical details of the different calculations, then
@@ -305,8 +307,8 @@ examples with real data on which the different estimators were tested.
 \subsubsection*{$F_{ST}$}
 The $F_{ST}$ (Wright's \emph{F} statistics for \emph{Subpopulation} vs
 \emph{Total}), a.k.a. \emph{fixation index}, is a measure of the genetic
-substructure in a joint population (or of the genetic
-differentiation between (sub)populations). $F_{ST}$ was calculated as
+differentiation between (sub)populations (e.g. the test and reference
+populations in our case). For any given locus, $F_{ST}$ was calculated as
 described by Nei (\cite{nei1977f}); partitioning the total
 expected heterozygosity ($H_T$, or gene diversity) into the
 \emph{interpopulation} diversity ($D_{ST}$) and the
@@ -319,51 +321,43 @@ differentiation among subpopulations:
 F_{st}=\frac{D_{st}}{H_T}=\frac{H_T-\overline{H}_S}{H_T}=1-\frac{\overline{H}_S}{H_T}  
 \end{equation}
 
+where $\overline{H}_S=\sum_{i=1}^k w_iH_{S_i}$ is the weighted average of the expected heterozygosities within
+\emph{k} subpopulations each accounting for a proportion $w_i$ of the total
+population size ($H_{S_i}=1-\sum_{j=1}^{m} p_j^2$
+is the expected heterozygosity within subpopulation \emph{i} -with $m$
+alleles at the given locus); $H_T=1-\sum_{i=1}^m \overline{p}_{i}^2$
+is the expected heterozygosity in the overall
+population, with $\overline{p_i}=\sum_{i=1}^k w_k p_k$, the average
+allele frequency at the given locus across \emph{k} subpopulations
+each accounting for a proportion $w_i$ of the total sample size.
 
-\begin{equation}
-H_T=D_{st}+\overline{H}_S
-\end{equation} 
-
-$\overline{H}_S$ is the average expected heterozygosity within
-subpopulations. Let $H_S$ be the expected heterozygosity within a single
-subpopulation (with $L$ number of loci and $m$ number of alleles within locus): 
-
-\begin{equation}
-H_S=1-\frac{1}{L}\sum_{l=1}^L\sum_{i=1}^{m} p_i^2
-\end{equation}
-
-The average expected heterozygosity within the \emph{k} subpopulations is then:
-
-\begin{equation}
-\overline{H}_S=\frac{1}{k}\sum_{s=1}^k H_S
-\end{equation} 
-
-We shall now consider the expected heterozygosity in the overall
-population; let the average allele frequency at locus $i$ across $k$
-subpopulations be the
-weighted average of individual allele frequencies:
-$\overline{p}_i=\frac{1}{\sum_{s=1}^kn_s}\sum_{s=1}^k n_s p_{is}$, with
-$n_s$ the subpopulation size, or, using proportions,
-$\overline{p_i}=\sum_{i=1}^k w_k p_k$, with $w_k$ the proportion of
-subpopulation \emph{k} on the total. The
-expected heterozygosity in the total population is then:
-
-\begin{equation}
-H_T=1-\frac{1}{L}\sum_{l=1}^L \sum_{i=1}^m \overline{p}_{il}^2  
-\end{equation}
-
-
-$F_{st}$ measures the deviation of heterozygosity from Hardy-Weinberg
-equilibrium in the total population which is due to the differentiation
-among subpopulations.
-The comparison between the heterozygosity expected under Hardy-Weinberg
-equilibrium and the heterozygosity observed in the population gives indications with respect
-to phenomena such as inbreeding, itnrogression, and admixture.
+$F_{ST}$ measures the differentiation between the null and reference
+populations, and was used in this study as primary benchmark against
+which other methods were evaluated. 
 
 \subsubsection*{Squared difference ($D^2$)}
+A very simple and naive approach for the estimation of the genetic
+distance between populations is the squared difference of their allele
+frequencies. For any given locus, the allele frequencies of the minor
+allele in the test and
+null populations ($q_1$ and $q_2$) were calculated, and their squared difference used to
+measure the degree of differentiation between the two populations:
+
+\begin{equation}
+D^2=(q_1-q_2)^2
+\end{equation}
+
+While $F_{ST}$ was chosen as benchamrk due to its long-standing theoretical
+development and its wide-spread use in the detection of population
+substructure, $D^2$ has been used as additional naive benchmark against which
+more sophisticated methods can be compared. 
 
 \subsubsection*{Binomial log-likelihood (BLL)}
 Three cases: A vs B, B vs A and A vs A+B
+
+\begin{equation}
+LL_{ij}={n \choose k} (1-q)^kq^{n-k}
+\end{equation}
 
 \subsubsection*{Multiplicative log-likelihood (MLL)}
 \subsubsection*{Hypergeometric log-likelihood (HGLL)}
@@ -414,7 +408,13 @@ threshold \emph{\(\alpha\)}: \(P(false\_positive)=1-(1-\alpha)^n\). When, for in
 selection, for $\alpha=0.01$, 500 false positive associations are expected on averege, just
 by mere chance. 
 
+\subsection*{Sliding windows}
 
+\begin{equation}
+CLL_{ij}=\frac{1}{w}\sum_{j=1}^{j+w-1}LL_{ij}
+\end{equation}
+
+\subsection*{Software}
 
 \begin{itemize}
 \item Bonferroni correction: very strict; implicit prior assumption that the
@@ -426,7 +426,7 @@ positives zero is justifiable (\cite{wakefield2008reporting})
 \end{itemize}
 
 \section*{Results and discussion}
-Text \ldots
+For biallelic loci, $D^2$ is intrinsically symmetric: $(p_1-p_2)^2 = ((1-p_1)-(1-p_2))^2$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
