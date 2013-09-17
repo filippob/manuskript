@@ -303,7 +303,7 @@ First, we present numerical details of the different calculations, then
 examples with real data on which the different estimators were tested.
 
 
-\subsection*{Numerical illustration}
+\subsection*{Detecting signatures of selection}
 \subsubsection*{$F_{ST}$}
 The $F_{ST}$ (Wright's \emph{F} statistics for \emph{Subpopulation} vs
 \emph{Total}), a.k.a. \emph{fixation index}, is a measure of the genetic
@@ -338,13 +338,13 @@ which other methods were evaluated.
 \subsubsection*{Squared difference ($D^2$)}
 A very simple and naive approach for the estimation of the genetic
 distance between populations is the squared difference of their allele
-frequencies. For any given locus, the allele frequencies of the minor
+frequencies. For any given locus, the allele frequencies of the first
 allele in the test and
-null populations ($q_1$ and $q_2$) were calculated, and their squared difference used to
+null populations ($p_1$ and $p_2$) were calculated, and their squared difference used to
 measure the degree of differentiation between the two populations:
 
 \begin{equation}
-D^2=(q_1-q_2)^2
+D^2=(p_1-p_2)^2
 \end{equation}
 
 While $F_{ST}$ was chosen as benchamrk due to its long-standing theoretical
@@ -353,13 +353,50 @@ substructure, $D^2$ has been used as additional naive benchmark against which
 more sophisticated methods can be compared. 
 
 \subsubsection*{Binomial log-likelihood (BLL)}
-Three cases: A vs B, B vs A and A vs A+B
+Allele frequencies at a given locus (\emph{A/a}) between the test
+and null populations are compared. Let $p_N$ be the frequency of
+allele \emph{A} in the null population, and $n_T$ and $k_T$ the total number of
+alleles and the number of \emph{A} alleles in the test population
+respectively. Under the null hypothesis that $p_T=p_N$, the allele count
+in the test population can be thought of as a random sample from the
+same reference population. The following binomial function measures the likelihood
+that such a sample actually comes from the reference population:  
 
 \begin{equation}
 LL_{ij}={n \choose k} (1-q)^kq^{n-k}
 \end{equation}
 
+where $LL_{ij}$ is the probability to observe the test allele
+distribution at locus \emph{j} on chromosome \emph{i} in the null population. 
+The smaller $LL_{ij}$ the less likely it is that the two populations are
+one and the same, and the more justifiable it is to accept the
+alternative hypothesis that the test and null populations are actually
+different (maybe because of some genetic processs such as natural or
+artificial selection). 
+
+Unless the test and null populations have the same size and their allele
+frequencies are complementary ($p_N=p_T$), the binomial log-likelihood
+is not symmetric. Therefore, three cases can be envisaged: 1) comparison
+of N vs T (\emph{BLL1}); 2) comparison of T vs N (\emph{BLL2}); 3)
+  comparison of  T vs N+T (\emph{BLL3}). The latter is what was
+  implemented in \cite{stella2010identification}, and works well with
+  multiple comparisons, when one population has to be compared against
+  many other populations: it has the advantage
+  of creating fewer numerical problems (lack of symmetry, falling
+  outside of the computational space etc ...), but has the shortcoming
+  of shrinking the power of the comparison (since $T \subset N$ -the test population is
+  included in the null population). Additionally, it is often the case
+  that two populations have to be compared against each other. For the
+  reasons above, all three scenarios (\emph{BLL1, BLL2, BLL3}) were
+  evaluated in the present study.
+
 \subsubsection*{Multiplicative log-likelihood (MLL)}
+To overcome the issue of lack of symmetry with BLL, a
+possibility is to combine the likelihood of BLL1 and BLL2 (T vs N
+and N vs T). Being probabilities, a natural approach is to multiplicate
+them: $MLL = LL_{TvsN}*LL_{NvsT}$ 
+
+
 \subsubsection*{Hypergeometric log-likelihood (HGLL)}
 \subsubsection*{Distribution of the differences (DIFF)}
 Two cases: parametrical test, resampling method
@@ -394,6 +431,13 @@ Text for this sub-sub-heading \ldots
 \paragraph*{Sub-sub-sub heading for section}
 sasad
 
+\subsection*{Sliding windows}
+
+\begin{equation}
+CLL_{ij}=\frac{1}{w}\sum_{j=1}^{j+w-1}LL_{ij}
+\end{equation}
+
+
 \subsection*{Testing significance}
 
 When analysing tens or hundreds of thousands of markers the problem of
@@ -408,13 +452,6 @@ threshold \emph{\(\alpha\)}: \(P(false\_positive)=1-(1-\alpha)^n\). When, for in
 selection, for $\alpha=0.01$, 500 false positive associations are expected on averege, just
 by mere chance. 
 
-\subsection*{Sliding windows}
-
-\begin{equation}
-CLL_{ij}=\frac{1}{w}\sum_{j=1}^{j+w-1}LL_{ij}
-\end{equation}
-
-\subsection*{Software}
 
 \begin{itemize}
 \item Bonferroni correction: very strict; implicit prior assumption that the
@@ -425,8 +462,18 @@ positives zero is justifiable (\cite{wakefield2008reporting})
 \item Permutation test
 \end{itemize}
 
+\subsection*{Software}
+Code in C/C++
+
+
 \section*{Results and discussion}
-For biallelic loci, $D^2$ is intrinsically symmetric: $(p_1-p_2)^2 = ((1-p_1)-(1-p_2))^2$
+For biallelic loci, $D^2$ is intrinsically symmetric: $(p_1-p_2)^2 =
+((1-p_1)-(1-p_2))^2$
+
+\subsection*{Numerical illustration}
+
+\subsection*{Application to real data}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
