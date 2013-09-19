@@ -53,7 +53,7 @@
 \usepackage[utf8]{inputenc} %unicode support
 %\usepackage[applemac]{inputenc} %applemac support if unicode package fails
 %\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
-
+\usepackage{graphicx,subfigure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                             %%
@@ -71,8 +71,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\def\includegraphic{}
-\def\includegraphics{}
+%\includegraphic{}
+%\includegraphics{}
 
 
 
@@ -532,6 +532,19 @@ threshold \emph{\(\alpha\)}: \(P(false\_positive)=1-(1-\alpha)^n\). When, for in
 selection, for $\alpha=0.01$, 500 false positive associations are expected on averege, just
 by mere chance. 
 
+A classical approach to controlling the number of false positives is to
+apply the Bonferroni correction (\cite{hochberg1988sharper}) and
+reject $H_0$ when $p-value \leq  \alpha/m$ (i.e. family-wise error rate,
+FWER), where $\alpha$ is the chosen
+significance threshold and \emph{m} is the number of tests performed. 
+The Bonferroni correction aims to make the number of false positives as
+close as possible to zero, and is justified when there is an implicit prior
+assumption that the probability that all tests are null is not small
+(\cite{westfall1997bayesian,wakefield2008reporting}), but tends to be overly conservative in
+many practical applications. For example in our case ...
+Can the Bonferroni correction be applied to Fst? And $D^2$? The same holds
+for FDR.
+
 
 \begin{itemize}
 \item Bonferroni correction: very strict; implicit prior assumption that the
@@ -608,7 +621,30 @@ positives zero is justifiable (\cite{wakefield2008reporting})
 \begin{figure}[h!]
   \caption{\csentence{Sample figure title.}
       Figure legend text.}
+    \includegraphics[width=0.9\textwidth]{DiffTest.png}
+    \label{fig:difftest}
       \end{figure}
+
+\begin{figure}[ht!]
+\begin{center}
+
+% \subfigure[Caption of First Figure]{
+%   \label{fig:first}
+%   \includegraphics[width=0.4\textwidth]{DiffTest}
+% }
+
+% \subfigure[Caption of Second Figure]{
+%     \label{fig:second}
+%     \includegraphics[width=0.4\textwidth]{DiffPermHundredThousand}
+%  }\\ % ------- End of the first row ----------------------%
+
+\end{center}
+\caption{ 
+The l-o-n-g caption for all the subfigures
+(FirstFigure through FourthFigure) goes here.
+}
+\label{fig:subfigures}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                               %%

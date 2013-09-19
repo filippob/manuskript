@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.10)  19 SEP 2013 12:56
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.10)  19 SEP 2013 17:02
 entering extended mode
  %&-line parsing enabled.
 **\input CLLMethodsArticle_1.tex
@@ -282,6 +282,43 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen105
+\Gin@req@width=\dimen106
+)
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip43
+\subfigcapskip=\skip44
+\subfigcaptopadj=\dimen107
+\subfigbottomskip=\skip45
+\subfigcapmargin=\dimen108
+\subfiglabelskip=\skip46
+\c@subfigure=\count92
+\c@lofdepth=\count93
+\c@subtable=\count94
+\c@lotdepth=\count95
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip47
+\subfig@bottom=\skip48
+)
 (./CLLMethodsArticle_1.aux)
 \openout1 = `CLLMethodsArticle_1.aux'.
 
@@ -300,15 +337,15 @@ LaTeX Font Info:    ... okay on input line 85.
 
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count92
-\scratchdimen=\dimen105
+\scratchcounter=\count96
+\scratchdimen=\dimen109
 \scratchbox=\box30
-\nofMPsegments=\count93
-\nofMParguments=\count94
+\nofMPsegments=\count97
+\nofMParguments=\count98
 \everyMPshowfont=\toks19
-\MPscratchCnt=\count95
-\MPscratchDim=\dimen106
-\MPnumerator=\count96
+\MPscratchCnt=\count99
+\MPscratchDim=\dimen110
+\MPnumerator=\count100
 \everyMPtoPDFconversion=\toks20
 )
 
@@ -356,39 +393,43 @@ Overfull \hbox (1.0pt too wide) has occurred while \output is active
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ] [2] [3] [4] [5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 537.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 550.
 
 
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 537.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 550.
  (./CLLMethodsArticle_1.bbl
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <7> not available
 (Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 114.
 
 
-) [6]
+[6])
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 605.
+(Font)              <8> on input line 618.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 605.
- AED: lastpage setting LastPage [7] (./CLLMethodsArticle_1.aux)
+(Font)              <6> on input line 618.
+ <DiffTest.png, id=34, 2068.72874pt x 1098.1025pt>
+File: DiffTest.png Graphic file (type png)
+ <use DiffTest.png>
+[7 <./DiffTest.png>] AED: lastpage setting LastPage [8]
+(./CLLMethodsArticle_1.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 2078 strings out of 495061
- 24919 string characters out of 1182621
- 82665 words of memory out of 3000000
- 5278 multiletter control sequences out of 15000+50000
+ 2403 strings out of 495061
+ 29312 string characters out of 1182621
+ 88102 words of memory out of 3000000
+ 5584 multiletter control sequences out of 15000+50000
  10726 words of font info for 37 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 30i,9n,37p,242b,297s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,9n,37p,242b,396s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-te
 xlive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-texlive/fonts/
@@ -402,9 +443,9 @@ ype1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-texlive/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
 m/cmsy7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb
 >
-Output written on CLLMethodsArticle_1.pdf (7 pages, 202026 bytes).
+Output written on CLLMethodsArticle_1.pdf (8 pages, 409043 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
+ 88 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{15}
+\begin{thebibliography}{17}
 % BibTex style file: bmc-mathphys.bst (version 1.01), 2012-01-06
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -260,6 +260,32 @@ SCIENCE-NEW YORK THEN WASHINGTON-,
 \endbibitem
 
 %%% 15
+\bibitem{hochberg1988sharper}
+\begin{barticle}
+\bauthor{\bsnm{Hochberg}, \binits{Y.}}:
+\batitle{A sharper bonferroni procedure for multiple tests of significance}.
+\bjtitle{Biometrika}
+\bvolume{75}(\bissue{4}),
+\bfpage{800}--\blpage{802}
+(\byear{1988})
+\end{barticle}
+\endbibitem
+
+%%% 16
+\bibitem{westfall1997bayesian}
+\begin{barticle}
+\bauthor{\bsnm{Westfall}, \binits{P.H.}},
+\bauthor{\bsnm{Johnson}, \binits{W.O.}},
+\bauthor{\bsnm{Utts}, \binits{J.M.}}:
+\batitle{A bayesian perspective on the bonferroni adjustment}.
+\bjtitle{Biometrika}
+\bvolume{84}(\bissue{2}),
+\bfpage{419}--\blpage{427}
+(\byear{1997})
+\end{barticle}
+\endbibitem
+
+%%% 17
 \bibitem{wakefield2008reporting}
 \begin{barticle}
 \bauthor{\bsnm{Wakefield}, \binits{J.}}:
