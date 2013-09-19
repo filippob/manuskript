@@ -1,4 +1,4 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{15}
 % BibTex style file: bmc-mathphys.bst (version 1.01), 2012-01-06
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -177,6 +177,19 @@
 \endbibitem
 
 %%% 9
+\bibitem{jantosciak2002duality}
+\begin{barticle}
+\bauthor{\bsnm{Jantosciak}, \binits{J.}},
+\bauthor{\bsnm{Barnier}, \binits{W.}}:
+\batitle{Duality and symmetry in the hypergeometric distribution}.
+\bjtitle{Mathematics magazine}
+\bvolume{75}(\bissue{2}),
+\bfpage{135}--\blpage{143}
+(\byear{2002})
+\end{barticle}
+\endbibitem
+
+%%% 10
 \bibitem{thomsen2006missense}
 \begin{barticle}
 \bauthor{\bsnm{Thomsen}, \binits{B.}},
@@ -198,7 +211,18 @@
 \end{barticle}
 \endbibitem
 
-%%% 10
+%%% 11
+\bibitem{eaton2002gnu}
+\begin{botherref}
+\oauthor{\bsnm{Eaton}, \binits{J.}},
+\oauthor{\bsnm{Bateman}, \binits{D.}},
+\oauthor{\bsnm{Hauberg}, \binits{S.}}:
+Gnu octave manual (network theory limited, bristol, uk)
+(2002)
+\end{botherref}
+\endbibitem
+
+%%% 12
 \bibitem{berry2007difficult}
 \begin{barticle}
 \bauthor{\bsnm{Berry}, \binits{D.A.}}:
@@ -210,7 +234,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 11
+%%% 13
 \bibitem{lander1994genetic}
 \begin{botherref}
 \oauthor{\bsnm{Lander}, \binits{E.S.}},
@@ -222,7 +246,7 @@ SCIENCE-NEW YORK THEN WASHINGTON-,
 \end{botherref}
 \endbibitem
 
-%%% 12
+%%% 14
 \bibitem{risch1996future}
 \begin{barticle}
 \bauthor{\bsnm{Risch}, \binits{N.}},
@@ -235,7 +259,7 @@ SCIENCE-NEW YORK THEN WASHINGTON-,
 \end{barticle}
 \endbibitem
 
-%%% 13
+%%% 15
 \bibitem{wakefield2008reporting}
 \begin{barticle}
 \bauthor{\bsnm{Wakefield}, \binits{J.}}:

@@ -4,44 +4,44 @@ The style file: bmc-mathphys.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 472446405560.
 Database file #1: cll-biblio.bib
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-You've used 13 entries,
+You've used 15 entries,
             6330 wiz_defined-function locations,
-            1106 strings with 11308 characters,
-and the built_in function-call counts, 60326 in all, are:
-= -- 7225
-> -- 599
-< -- 286
-+ -- 1395
-- -- 134
-* -- 4151
-:= -- 12030
-add.period$ -- 13
-call.type$ -- 13
-change.case$ -- 67
-chr.to.int$ -- 808
-cite$ -- 13
-duplicate$ -- 756
-empty$ -- 3884
-format.name$ -- 415
-if$ -- 13924
+            1116 strings with 11563 characters,
+and the built_in function-call counts, 66668 in all, are:
+= -- 8082
+> -- 657
+< -- 312
++ -- 1644
+- -- 149
+* -- 4483
+:= -- 13352
+add.period$ -- 14
+call.type$ -- 15
+change.case$ -- 80
+chr.to.int$ -- 870
+cite$ -- 15
+duplicate$ -- 828
+empty$ -- 4211
+format.name$ -- 456
+if$ -- 15446
 int.to.chr$ -- 1
-int.to.str$ -- 18
+int.to.str$ -- 23
 missing$ -- 0
-newline$ -- 243
-num.names$ -- 52
-pop$ -- 295
+newline$ -- 267
+num.names$ -- 60
+pop$ -- 335
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 65
 quote$ -- 0
-skip$ -- 4094
+skip$ -- 4603
 stack$ -- 0
-substring$ -- 7905
-swap$ -- 480
-text.length$ -- 162
+substring$ -- 8525
+swap$ -- 519
+text.length$ -- 191
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 567
+type$ -- 638
 warning$ -- 0
-while$ -- 469
+while$ -- 526
 width$ -- 0
-write$ -- 272
+write$ -- 300

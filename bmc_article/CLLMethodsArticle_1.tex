@@ -249,7 +249,7 @@ can shape the genome of living organisms and change allele frequencies.
 A mutation that is beneficial for the adaptation of an organism to its
 environment, or that is of agricultural or industrial interest, tends to increase in
 frequency in the population, together with neighbouring genomic regions
-which tend to be hitch-hiked in the process (\cite{braverman1995hitchhiking}). 
+which are dragged along (``hitch-hiked'') in the process (\cite{braverman1995hitchhiking}). 
 Through the last decade, the on-going genomic revolution has been making
 available hundreds of thousands of genetic markers for several animal, microbial and
 plant species. By looking at the allele frequency at marker loci along
@@ -270,11 +270,10 @@ However, there are several ways in which such likelihoods can be
 computed, and these might differ in computation requirements and
 statistical properties, such as the sensitivity to detect signals of
 selection or the behaviour along the margins of the dimensional space.
-(add examples?)
 It may therefore be of interest to investigate the statistical
 properties of different estimators
 for the likelihood of the difference between allele frequency, and
-assess how well they are capable of detected actual signals of
+assess how well they are capable of detecting actual signals of
 selection.
 
 In this study we evaluated 4 different ways to estimate the likelihood
@@ -284,12 +283,12 @@ along the genome (CLL, composite log-likelihood) in order to detect
 signatures of selection. The proposed CLL approaches were compared among
 them and with approaches based on $F_{ST}$ and on simple squared
 distances between genotypes. All methods were first analysed numerically
-along the entire dimensional space (frequencies in analysed populations
-ranging from 0 to 1) and then tested with real data where strong signals
+ by simulating scenarios along the entire dimensional space (frequency range
+ and population size ratios between the test and null populations) and then tested with real data where strong signals
 of selection are known to be present. The methods hereby presented have
 been developed having in mind biallelic genetic markers (namely SNPs),
-but can in principle be adapted to any kind of markers (discuss this in
-``Results and discussion''?).
+but can in principle be adapted to any kind of markers and applied to
+any diploid organism.
 
 \section*{Methods}
 
@@ -312,8 +311,7 @@ populations in our case). For any given locus, $F_{ST}$ was calculated as
 described by Nei (\cite{nei1977f}); partitioning the total
 expected heterozygosity ($H_T$, or gene diversity) into the
 \emph{interpopulation} diversity ($D_{ST}$) and the
-\emph{intrapopulation} diversity ($\overline{H}_S$, average of the
-expected heterozygosity -$H_S$- in the subpopulations weighted by their size),
+\emph{intrapopulation} diversity ($\overline{H}_S$),
 the $F_{ST}$ is defined as the proportion of gene diversity due to
 differentiation among subpopulations:
 
@@ -371,7 +369,7 @@ distribution at locus \emph{j} on chromosome \emph{i} in the null population.
 The smaller $LL_{ij}$ the less likely it is that the two populations are
 one and the same, and the more justifiable it is to accept the
 alternative hypothesis that the test and null populations are actually
-different (maybe because of some genetic processs such as natural or
+different (for instance because of some genetic processs such as natural or
 artificial selection). 
 
 Unless the test and null populations have the same size and their allele
@@ -391,15 +389,70 @@ of N vs T (\emph{BLL1}); 2) comparison of T vs N (\emph{BLL2}); 3)
   evaluated in the present study.
 
 \subsubsection*{Multiplicative log-likelihood (MLL)}
-To overcome the issue of lack of symmetry with BLL, a
+To overcome the issue of the lack of symmetry with BLL, a
 possibility is to combine the likelihood of BLL1 and BLL2 (T vs N
-and N vs T). Being probabilities, a natural approach is to multiplicate
-them: $MLL = LL_{TvsN}*LL_{NvsT}$ 
+and N vs T). A natural approach to combining probabilities is through
+multiplication. Therefore the multiplicative log-likelihood was defined
+as:
 
+\begin{equation}
+MLL_{ij} = BLL_{ij(TvsN)}*BLL_{ij(NvsT)}
+\end{equation}
+
+where $MLL_{ij}$ is the multiplicative log-likelihood at locus \emph{j}
+on chromosome \emph{i} and $BLL_{ij(TvsN)}$ and $BLL_{ij(NvsT)}$ are the
+two binomial log-likelihoods (BLL1 and BLL2).
 
 \subsubsection*{Hypergeometric log-likelihood (HGLL)}
+An alternative approach is to look at the test population as a random
+sample from the reference population and calculate the probability of
+obtaining the observed allele counts. Under the null hypothesis that $p_N=p_T$, the two populations
+can be combined into one and such probability would follow a hypergeometric distribution:
+
+\begin{equation}
+HGLL_{ij}=\frac{{n_{A_N}+n_{A_T} \choose n_{A_T}} \cdot {(N_N+N_T)-(n_{A_N}+n_{A_T}) \choose N_T-n_{A_T}}}{{N_N+N_T \choose N_T}}
+\end{equation}
+
+where $n_{A_N}$, $n_{A_T}$, $N_N$ and $N_T$ are the number of A alleles
+and the total number of
+alleles in the null and test population respectively.
+HGLL is symmetric with respect to the population chosen as test or
+reference (\cite{jantosciak2002duality}), and assumes that sampling is without replacement, which may
+be closer to the allele sampling process involved in the biological
+differentiation of populations.
+ 
+
 \subsubsection*{Distribution of the differences (DIFF)}
-Two cases: parametrical test, resampling method
+Instead of comparing the allele frequency observed in the test
+population against that of the null population, one could look
+directly at the difference between the two allele frequencies. 
+First, the absolute difference between allele frequencies is
+calculated: $d=|p_1-p_2|$. In order to obtain a likelihood value for
+\emph{d}, both an analytical (\emph{DIFF1}) and numerical (\emph{DIFF2})
+approach were adopted.
+In \emph{DIFF1}, \emph{d} was standardized ($z=\frac{d}{\sqrt{\hat{p}(1-\hat{p})(1/N_N+1/N_T)}}$) and compared against a normal
+distribution.
+In \emph{DIFF2}, genotypes were randomly permuted between the null and
+test population, and the difference between the allele frequencies
+calculated each time. A distribution of values of \emph{d} under
+\emph{$H_0$} ($d=0$) was thus
+produced and its empirical probability distribution function used to obtain a
+likelihood value for the allele frequency difference between the
+original populations, \emph{d}. Different numbers
+of permutations were tested in terms of results obtained and computation
+time.
+
+\subsection*{Simulated scenarios}
+For all methods for the detection of signatures of selection, different
+scenarios were simulated, in order to evaluate the statistical behaviour
+and computational requirements for chainging values of the parameters
+used. Specifically, the methods were evaluated against different values
+of allele frequency and different sample sizes in the null and test
+populations. The whole range of allele frequency (from 0 to 1) was
+simulated, and three different population size ratios were considered:
+balanced design (equally sized null and test population), mildly
+unbalanced design (1:2 population size ratio), and extremely unbalanced
+design (1:10 population size ratio).
 
 \subsection*{``Ballons d'essai''}
 
@@ -426,17 +479,44 @@ for the detection of signatures of selection.
 
 ?` Also DGAT1, Myostatin, Caseins ?
 
-\subsubsection*{Working example}
-Text for this sub-sub-heading \ldots
-\paragraph*{Sub-sub-sub heading for section}
-sasad
-
 \subsection*{Sliding windows}
+When analysing actual data, $F_{ST}$ and $D^2$ values, and the likelihoods obtained with all the
+methods presented, were combined in sliding windows based on the
+base-pair distance (bps) between SNPs, in order to reduce the influence of spurious signals.
+A fixed sliding window of 200 kbps (check this!) was used, and composite log-likelihoods (CLL) were thus obtained:
 
 \begin{equation}
-CLL_{ij}=\frac{1}{w}\sum_{j=1}^{j+w-1}LL_{ij}
+CLL_{i\overline{j}}=\frac{1}{w}\sum_{j=1}^{j+w-1}LL_{ij}
 \end{equation}
 
+where $CLL_{i\overline{j}}$ is the composite log-likelihood at position \emph{$\overline{j}$}
+(midpoint of the sliding window) on chromosome \emph{i}, and $LL_{ij}$
+are the log-likelihood values calculated for all the SNPs between SNP
+\emph{j} and 200 kbps ahead of it.
+
+\subsection*{Software}
+Code in C/C++ (check with Nelson!) was written to implement all of the statistical methods to
+detect signatures of selection presented above. The R programming
+environment and Octave (\cite{eaton2002gnu}) for statistical analysis were used to prototype some of the
+tests and produce graphical visualization of the results.
+
+
+\section*{Results and discussion}
+All methods were evaluated in terms of their statistical properties
+(sensitivity to detect signatures of selection, symmetry around
+population subdivision, robustness to unbalanced data, behaviour at the
+margin of the dimensional space) and computation requirements.
+
+For biallelic loci, $D^2$ is intrinsically symmetric: $(p_1-p_2)^2 =
+((1-p_1)-(1-p_2))^2$
+
+Is Fst obsolete?
+
+Use haplotypes (Gianola et al.)?
+
+\subsection*{Numerical illustration}
+
+\subsection*{Application to real data}
 
 \subsection*{Testing significance}
 
@@ -462,18 +542,7 @@ positives zero is justifiable (\cite{wakefield2008reporting})
 \item Permutation test
 \end{itemize}
 
-\subsection*{Software}
-Code in C/C++
-
-
-\section*{Results and discussion}
-For biallelic loci, $D^2$ is intrinsically symmetric: $(p_1-p_2)^2 =
-((1-p_1)-(1-p_2))^2$
-
-\subsection*{Numerical illustration}
-
-\subsection*{Application to real data}
-
+\section*{Conclusions}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
