@@ -393,10 +393,10 @@ To overcome the issue of the lack of symmetry with BLL, a
 possibility is to combine the likelihood of BLL1 and BLL2 (T vs N
 and N vs T). A natural approach to combining probabilities is through
 multiplication. Therefore the multiplicative log-likelihood was defined
-as:
+as the geometric mean of the two binomial log-likelihoods:
 
 \begin{equation}
-MLL_{ij} = BLL_{ij(TvsN)}*BLL_{ij(NvsT)}
+MLL_{ij} = \sqrt{BLL_{ij(TvsN)}*BLL_{ij(NvsT)}}
 \end{equation}
 
 where $MLL_{ij}$ is the multiplicative log-likelihood at locus \emph{j}
@@ -509,6 +509,16 @@ margin of the dimensional space) and computation requirements.
 
 For biallelic loci, $D^2$ is intrinsically symmetric: $(p_1-p_2)^2 =
 ((1-p_1)-(1-p_2))^2$
+
+BLL1 and BLL2 go to $+\infty$ at the boundaries of the dimensional space
+(when the null and test populations are fixed for alternate alleles at
+the given locus). This leads to numerical problems and also to
+visualization problems when values of different methods are plotted
+together for comparison (BLL1 and BLL2 are shrunken towards the bottom
+of the plot area). This can also partly explain why BLL1 (or BLL2) and
+MLL appear to follow the same pattern: since $MLL=\sqrt{BLL1*BLL2}$,
+when one or both of the BLL go to infinity, the MLL is dragged along
+with it.
 
 Is Fst obsolete?
 
