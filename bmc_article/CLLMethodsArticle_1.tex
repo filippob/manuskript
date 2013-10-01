@@ -483,7 +483,8 @@ for the detection of signatures of selection.
 When analysing actual data, $F_{ST}$ and $D^2$ values, and the likelihoods obtained with all the
 methods presented, were combined in sliding windows based on the
 base-pair distance (bps) between SNPs, in order to reduce the influence of spurious signals.
-A fixed sliding window of 200 kbps (check this!) was used, and composite log-likelihoods (CLL) were thus obtained:
+A fixed sliding window of 200 kbps (check this! Maybe better 500 kb: see
+\cite{qanbari2011application}) was used, and composite log-likelihoods (CLL) were thus obtained:
 
 \begin{equation}
 CLL_{i\overline{j}}=\frac{1}{w}\sum_{j=1}^{j+w-1}LL_{ij}
@@ -522,10 +523,21 @@ with it.
 
 Is Fst obsolete?
 
-Use haplotypes (Gianola et al.)?
+Use haplotypes (e.g. EHH)?
 
 \subsection*{Numerical illustration}
 
+Given its behaviour at the boundaries of the dimensional space (no
+numerical problems for $p_1$ or $p_2$ equalling either $0$ or $1$), $F_{ST}$
+is powerful to detect fixation (same allele or alternate alleles)
+(\cite{biswas2006genomic}). Other methods may be more appropriate to
+detect ongoing selection, balancing selection, loci or haplotypes at
+moderate frequencies.
+
+\subsubsection*{Boundedness}
+\emph{BLL1}, \emph{BLL2} and the derived method \emph{MLL} have no upper
+bound: they go to $+\infty$ when alternative alleles are fixed in the
+test and null populations
 \subsection*{Application to real data}
 
 \subsection*{Testing significance}
