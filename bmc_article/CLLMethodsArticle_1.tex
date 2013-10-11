@@ -538,6 +538,44 @@ moderate frequencies.
 \emph{BLL1}, \emph{BLL2} and the derived method \emph{MLL} have no upper
 bound: they go to $+\infty$ when alternative alleles are fixed in the
 test and null populations
+
+\subsubsection*{Computation time (for permutations only)}
+[probably this will not be a paragraph bat will go together with the
+discussion on permutations]
+
+Cmmputation times for increasing
+number of permutations were investigated. The dimensional space of $d=p_1-p_2$ was
+explored for permutations going from $1000$ to $50\,000$, with steps of
+$1000$, for a population of 50 diploid individuals (25 each in the test
+and null population) and 1 locus; at each step, the whole range of frequency comparisons between
+the test and null populations was tested. The relationship between n. of
+iterations and computation time is clearly linear, as expected for a
+first-order problem. From these results, the
+computation time required for larger numbers of permutations can be
+extrapolated, and the computation time for a single frequency comparison
+and a given n. of permutations derived. For instance, on a \emph{2.0GHz
+  AMD Opteron}, if we wished to
+explore the entire dimensional space with $100\,000$ permutationas at
+each step (as
+it's been done in the numerical illustrations for the paper), it would
+take approximately 9 hours and 20 minutes.
+Or, if one wished to make a one-locus comparison between a test and a null
+experimental populations (which is usually the case when looking for
+signatures of selection) it would take less than 6 minutes with
+$200\,000$ permutations and a sample size of 50. Increasing the sample
+size would linearly increase the computation time. With 500 individuals
+(250 each in the test and null population if balanced, any other
+combination thereof otherwise) the empirical analysis of frequency
+difference with $100\,000$ permutations would take approximately $\frac{1}{2}$ hour. The same linear relationship
+holds for increasing number of loci. With the same 500 individuals and
+$100\,000$ permutations, if
+the comparison would involve 1000 loci the analysis would take 500 hours
+(20 days!). Parallelization could help reduce
+the computation time needed (with 4 cores the last example would go down to 5 days).
+
+A different permutation strategy (check with Nelson and describe) might
+be more efficient and computation times.
+
 \subsection*{Application to real data}
 
 \subsection*{Testing significance}
