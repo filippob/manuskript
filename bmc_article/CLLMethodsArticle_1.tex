@@ -361,12 +361,12 @@ same reference population. The following binomial function measures the likeliho
 that such a sample actually comes from the reference population:  
 
 \begin{equation}
-LL_{ij}={n \choose k} (1-q)^kq^{n-k}
+BLL_{ij}=ln\left\{{n_T \choose k_T} (1-p_N)^{k_T}p_N^{n_T-k_T}\right\}
 \end{equation}
 
-where $LL_{ij}$ is the probability to observe the test allele
+where $BLL_{ij}$ is the probability to observe the test allele
 distribution at locus \emph{j} on chromosome \emph{i} in the null population. 
-The smaller $LL_{ij}$ the less likely it is that the two populations are
+The smaller $BLL_{ij}$ the less likely it is that the two populations are
 one and the same, and the more justifiable it is to accept the
 alternative hypothesis that the test and null populations are actually
 different (for instance because of some genetic processs such as natural or
@@ -633,6 +633,13 @@ positives zero is justifiable (\cite{wakefield2008reporting})
 
 \section*{Acknowledgements}
   Data (Marras ...)? \ldots
+
+The research leading to these results has received funding from the European
+Union Seventh Framework Programme (FP7/2007-2013) under grant agreement
+n. 276699 (``NEUTRADAPT'')
+
+``NEXTGEN'' (how?)
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                  The Bibliography                       %%
 %%                                                         %%
